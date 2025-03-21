@@ -17,7 +17,9 @@ function App() {
     <Router>  {/* ✅ Ensure the entire app is wrapped inside Router */}
       <Navbar />  
       <Routes>
-        <Route path="/" element={ <><ImageSlider /> 
+        <Route path="/" element={ <>
+        <Home/>
+        <ImageSlider /> 
 
 
           
