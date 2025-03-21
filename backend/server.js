@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const axios = require("axios");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const path = require('path');
 
 const connectDB = require("./config/db"); // Database connection
 const PlantRoutes = require("./routes/PlantRoutes");
