@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon backend/server.js",
-    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend",
-
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "dev": "node backend/server.js"
   },
   "keywords": [],
@@ -20,5 +19,8 @@
     "express": "^4.21.2",
     "mongoose": "^8.10.1",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
