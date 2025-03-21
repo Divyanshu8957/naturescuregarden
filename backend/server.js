@@ -16,7 +16,7 @@ const _dirname = path.resolve();
 // ✅ Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5173", // ⚠️ Frontend ka port (React ke liye 3000 ho sakta hai, Vite ke liye 5173)
+  origin: "https://virtualherbalgarden.onrender.com", // ⚠️ Frontend ka port (React ke liye 3000 ho sakta hai, Vite ke liye 5173)
   methods: ["POST", "GET"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));

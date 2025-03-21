@@ -12,7 +12,7 @@ const Herba = () => {
     setMessages([...messages, userMessage]);
 
     try {
-      const res = await fetch("http://localhost:5000/api/chat", {
+      const res = await fetch("https://virtualherbalgarden.onrender.com/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input })

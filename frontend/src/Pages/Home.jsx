@@ -7,7 +7,7 @@ const Home = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/plants")
+    fetch("https://virtualherbalgarden.onrender.com/api/plants")
       .then((res) => res.json())
       .then((data) => setPlants(data))
       .catch((err) => console.error("Error fetching plants:", err));

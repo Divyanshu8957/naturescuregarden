@@ -10,7 +10,7 @@ const PlantDetails = () => {
   useEffect(() => {
     const fetchPlantDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/plants/${id}`);
+        const response = await fetch(`https://virtualherbalgarden.onrender.com/api/plants/${id}`);
         const data = await response.json();
         setPlant(data);
       } catch (error) {
