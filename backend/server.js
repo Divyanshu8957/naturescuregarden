@@ -31,9 +31,6 @@ connectDB();
 app.use("/api/plants", PlantRoutes);
 
 //  Home Route
-app.get("/", (req, res) => {
-  res.send("Welcome to Virtual Herbal Garden API 🌿");
-});
 if (!API_KEY) {
   console.error("❌ ERROR: Gemini API Key is missing in .env file!");
   process.exit(1);
@@ -64,10 +61,17 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
-app.get('*', (_,res) => {
-    res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
+const frontendPath = path.join(_dirname, "frontend", "dist");
+app.use(express.static(frontendPath));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"), (err) => {
+    if (err) {
+      res.status(500).send("Error loading frontend");
+    }
+  });
 });
+
 //  Server Port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
