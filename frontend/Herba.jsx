@@ -17,6 +17,7 @@ const Herba = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input })
       });
+     
 
       const data = await res.json();
       console.log("🟢 Chatbot Response:", data); 

@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+
 const cors = require("cors");
 const axios = require("axios");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
@@ -17,10 +18,11 @@ const _dirname = path.resolve();
 // ✅ Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://virtualherbalgarden.onrender.com", // ⚠️ Frontend ka port (React ke liye 3000 ho sakta hai, Vite ke liye 5173)
+  origin: "https://virtualherbalgarden.onrender.com",
   methods: ["POST", "GET"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 //  Connect to MongoDB
 connectDB();
