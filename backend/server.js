@@ -18,7 +18,7 @@ const _dirname = path.resolve();
 // ✅ Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://virtualherbalgarden.onrender.com",
+  origin: "https://naturescuregarden.onrender.com",
   methods: ["POST", "GET"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));

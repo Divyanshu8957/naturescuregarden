@@ -1,7 +1,7 @@
 export const fetchPlants = async () => {
   try {
     console.log("🌿 Fetching plants from API..."); // ✅ Debugging
-    const response = await fetch("https://virtualherbalgarden.onrender.com/api/plants");
+    const response = await fetch("https://naturescuregarden.onrender.com/api/plants");
 
     console.log("🔄 API Response:", response); // ✅ Debugging
 
